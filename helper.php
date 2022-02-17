@@ -14,7 +14,7 @@
      function convertOnOffToBoolean(&$data, $originalKeys)
      {
          foreach ($data as $key => $value):
-             if ($value == 'on') {
+             if (strtolower($value) == 'on') {
                  $data[$key] = true;
              }
          endforeach;
